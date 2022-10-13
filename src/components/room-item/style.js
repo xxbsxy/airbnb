@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ItemWrapper = styled.div`
   box-sizing: border-box;
-  width: 25%;
+  width: ${props => props.itemWidth};
   padding: 8px;
   .cover {
     position: relative;
@@ -14,6 +14,7 @@ export const ItemWrapper = styled.div`
       width: 100%;
       height: 100%;
       border-radius: 3px;
+			cursor: pointer;
     }
   }
   .desc {
