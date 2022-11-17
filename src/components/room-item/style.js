@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const ItemWrapper = styled.div`
+  flex-shrink: 0;
   box-sizing: border-box;
   width: ${props => props.itemWidth};
   padding: 8px;
@@ -17,6 +18,43 @@ export const ItemWrapper = styled.div`
 			cursor: pointer;
     }
   }
+	.swiper{
+		position: relative;
+		color: #fff;
+		cursor: pointer;
+		&:hover .control{
+			display: block;
+		}
+		.control{
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			display: none;
+			.btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 60px;
+			}
+			.left{
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				background-image: linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0));
+			}
+			.right{
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background-image: linear-gradient(to left, rgba(0,0,0,0.15), rgba(0,0,0,0));
+			}
+		}
+	}
   .desc {
     margin: 10px 0 5px;
     font-size: 14px;
